@@ -1,0 +1,51 @@
+@import "tachyons";
+
+/* [START] Colors */
+.off-white {
+  color: #fffde7;
+}
+
+.bg-off-white {
+  background-color: #fffde7;
+}
+
+.b--off-white {
+  border-color: #fffde7;
+}
+
+.off-white {
+  color: #fffde7;
+}
+
+.bg-accent {
+  background-color: #f8ebee;
+}
+
+.b--accent {
+  border-color: #f8ebee;
+}
+
+.base {
+  color: #fec8be;
+}
+
+.bg-base {
+  background-color: #fec8be;
+}
+
+.b--base {
+  border-color: #fec8be;
+}
+
+.base-dark {
+  color: #e2b7c1;
+}
+
+.bg-base-dark {
+  background-color: #e2b7c1;
+}
+
+.b--base-dark {
+  border-color: #e2b7c1;
+}
+/* [END] Colors */

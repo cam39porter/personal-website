@@ -28,6 +28,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
+    "tachyons": "4.11.1",
+    "tachyons-cli": "1.3.2",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -46,7 +48,10 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "tachyons src/css/app.css > static/css/index.css --minify",
+    "prestart": "npm run css",
+    "prebuild": "npm run css"
   },
   "devDependencies": {
     "http-proxy-middleware": "^0.19.1",
