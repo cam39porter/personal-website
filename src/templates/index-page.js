@@ -141,7 +141,7 @@ export const IndexPageTemplate = ({ title }) => (
         <p>and much more (kind of)...</p>
       </Card>
       <Card title={`Random / Requests`} />
-      <Card title={`Connect`}>
+      <Card title={`Connect`} link={`https://incremental.substack.com`}>
         <p>
           The best way to reach me is{" "}
           <a
