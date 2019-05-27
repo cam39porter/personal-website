@@ -2,7 +2,7 @@ var proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: "Incremental | CP",
+    title: "incremental x cp",
     description:
       "Cameron Porter's personal site including his newsletter, principles, library of readings/podcasts, list of things he likes, details on how to connect, and a bit on his story of incremental progress."
   },

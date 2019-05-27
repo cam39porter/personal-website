@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import { Link, navigate } from "gatsby";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -9,7 +7,30 @@ const Navbar = class extends React.Component {
   }
 
   render() {
-    return <nav className={`base`} />;
+    return (
+      <nav className={`dt w-100 pt4 pb3`}>
+        <div className={`dn dtc-l v-mid tl h-100 f2 ttl`}>
+          Cameron Porter |{" "}
+          <span className={`f3 fw3`}>Learning to found and fund companies</span>
+        </div>
+        <div className={`dn-l dtc v-mid tl h-100 f4 ttl`}>
+          CP |{" "}
+          <span className={`f6 fw3`}>Learning to found and fund companies</span>
+        </div>
+        <img
+          className={`dn dtc-l tr v-mid pointer grow`}
+          src={`../img/logo.png`}
+          height={64}
+          onClick={() => navigate("/")}
+        />
+        <img
+          className={`dn-l dtc tr v-mid pointer grow`}
+          src={`../img/logo.png`}
+          height={40}
+          onClick={() => navigate("/")}
+        />
+      </nav>
+    );
   }
 };
 

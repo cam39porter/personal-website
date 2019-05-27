@@ -5,20 +5,8 @@ import { Link, graphql, navigateTo } from "gatsby";
 import Layout from "../components/Layout";
 import Card from "../components/HomeCard";
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro
-}) => (
-  <div className={`pv3 f6 fw1`}>
-    <h1 className={`h-100 f2 ttl pb2`}>
-      {title} |{" "}
-      <span className={`f3 fw3`}>Learning to found and fund companies</span>
-    </h1>
+export const IndexPageTemplate = ({ title }) => (
+  <div className={`pb3 f6 fw1`}>
     <div className={`flex flex-wrap items-center justify-center pb3`}>
       <Card title={`read.me`}>
         <p>
@@ -62,7 +50,7 @@ export const IndexPageTemplate = ({
           <a
             className={`b link dim underline off-white`}
             target="_blank"
-            href="https://alleycorp.com"
+            href="https://www.alleycorp.com"
           >
             AlleyCorp
           </a>{" "}
@@ -196,27 +184,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
+      <IndexPageTemplate title={frontmatter.title} />
     </Layout>
   );
 };
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
-};
-
 export default IndexPage;
 
 export const pageQuery = graphql`
@@ -224,34 +195,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
