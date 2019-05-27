@@ -7,7 +7,12 @@ import useSiteMetadata from "./SiteMetadata";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className={`bg-base w-100 h-100 code`}>
+    <div
+      className={`bg-base sans-serif off-white ba bw3`}
+      style={{
+        minHeight: "100vh"
+      }}
+    >
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -46,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <div className={`measure-wide-ns w-90 center`}>
+      <div className={`w-90 center`}>
         <Navbar />
         {children} <Footer />
       </div>

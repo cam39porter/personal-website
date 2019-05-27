@@ -9,7 +9,7 @@ const Navbar = class extends React.Component {
   }
 
   render() {
-    return <nav className={`base`}>nav</nav>;
+    return <nav className={`base`} />;
   }
 };
 

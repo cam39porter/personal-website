@@ -13,8 +13,8 @@
   border-color: #fffde7;
 }
 
-.off-white {
-  color: #fffde7;
+.accent {
+  color: #f8ebee;
 }
 
 .bg-accent {
@@ -26,26 +26,38 @@
 }
 
 .base {
-  color: #fec8be;
+  color: #ead0b3;
 }
 
 .bg-base {
-  background-color: #fec8be;
+  background-color: #ead0b3;
 }
 
 .b--base {
+  border-color: #ead0b3;
+}
+
+.pink {
+  color: #fec8be;
+}
+
+.bg-pink {
+  background-color: #fec8be;
+}
+
+.b--pink {
   border-color: #fec8be;
 }
 
-.base-dark {
+.base-dark-pink {
   color: #e2b7c1;
 }
 
-.bg-base-dark {
+.bg-base-dark-pink {
   background-color: #e2b7c1;
 }
 
-.b--base-dark {
+.b--base-dark-pink {
   border-color: #e2b7c1;
 }
 /* [END] Colors */

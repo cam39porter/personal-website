@@ -2,9 +2,9 @@ var proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Incremental | CP",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "Cameron Porter's personal site including his newsletter, principles, library of readings/podcasts, list of things he likes, details on how to connect, and a bit on his story of incremental progress."
   },
   plugins: [
     "gatsby-plugin-react-helmet",
