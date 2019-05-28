@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql, navigateTo } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Card from "../components/HomeCard";
@@ -55,13 +55,9 @@ export const IndexPageTemplate = ({ title }) => (
             AlleyCorp
           </a>{" "}
           | Personal -{" "}
-          <a
-            className="b link dim underline off-white"
-            target="_blank"
-            href="https://hex.ventures"
-          >
+          <Link className="b link dim underline off-white" to="/hex-ventures">
             Hex Ventures
-          </a>
+          </Link>
         </p>
         <p />
       </Card>
@@ -113,6 +109,33 @@ export const IndexPageTemplate = ({ title }) => (
           3/ Reference - can search for things when I inevitably forget them
         </p>
       </Card>
+      <Card title={`Newsletter`} link={`https://incremental.substack.com`}>
+        <p>
+          i take{" "}
+          <a
+            className={`link dim underline off-white`}
+            target="_blank"
+            href="https://www.notion.so/4349a812604a48128c5f47e46baa26df?v=b3509ca6d659469eb2471fd2c922589f"
+          >
+            a lot of notes
+          </a>
+          . often times those notes serve as the backbone of interesting dinner
+          conversations.
+        </p>
+        <p>
+          instead of being the only one that gets any use out of the material, i
+          decided each week to curate those notes into{" "}
+          <a
+            className={`link dim underline off-white`}
+            target="_blank"
+            href="incremental.substack.com"
+          >
+            a newsletter
+          </a>{" "}
+          with 3 long enough dives that can each serve as the cornerstone of a
+          dinner conversation.
+        </p>
+      </Card>
       <Card title={`Things I Like`}>
         <p>
           <a className={`link dim underline off-white`} target="_blank" href="">
@@ -140,8 +163,7 @@ export const IndexPageTemplate = ({ title }) => (
         </p>
         <p>and much more (kind of)...</p>
       </Card>
-      <Card title={`Random / Requests`} />
-      <Card title={`Connect`} link={`https://incremental.substack.com`}>
+      <Card title={`Connect`} to={"/contact"}>
         <p>
           The best way to reach me is{" "}
           <a
@@ -173,6 +195,12 @@ export const IndexPageTemplate = ({ title }) => (
           >
             cam @ incremental dot nyc
           </a>
+        </p>
+        <p>
+          Or if you just like traditional web forms...
+          <Link className="link dim underline off-white" to="/hex-ventures">
+            try here!
+          </Link>
         </p>
       </Card>
     </div>

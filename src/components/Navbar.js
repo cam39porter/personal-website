@@ -9,11 +9,17 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav className={`dt w-100 pt4 pb3`}>
-        <div className={`dn dtc-l v-mid tl h-100 f2 ttl`}>
+        <div
+          className={`dn dtc-l v-mid tl h-100 f2 ttl pointer`}
+          onClick={() => navigate("/")}
+        >
           Cameron Porter |{" "}
           <span className={`f3 fw3`}>Learning to found and fund companies</span>
         </div>
-        <div className={`dn-l dtc v-mid tl h-100 f4 ttl`}>
+        <div
+          className={`dn-l dtc v-mid tl h-100 f4 ttl pointer`}
+          onClick={() => navigate("/")}
+        >
           CP |{" "}
           <span className={`f6 fw3`}>Learning to found and fund companies</span>
         </div>

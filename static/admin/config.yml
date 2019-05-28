@@ -20,3 +20,23 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
+      - file: "src/pages/hex-ventures.md"
+        label: "Hex Ventures"
+        name: "hex-ventures"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "hex-ventures-page",
+            }
+      - file: "src/pages/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
