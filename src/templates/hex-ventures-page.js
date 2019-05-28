@@ -107,7 +107,7 @@ class HexVenturesPageTemplate extends React.Component {
                 </div>
                 <div className="field">
                   <button
-                    className="input-reset fr button is-link pa2 off-white bg-base ba b--off-white grow pointer"
+                    className="input-reset button is-link pa2 mt1 off-white bg-base ba b--off-white grow pointer"
                     type="submit"
                   >
                     Send
