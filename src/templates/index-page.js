@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({ title }) => (
           "https://www.notion.so/4349a812604a48128c5f47e46baa26df?v=b3509ca6d659469eb2471fd2c922589f"
         }
       >
-        <p>I started tracking the what I consumed because</p>
+        <p>I started tracking the info I consumed because...</p>
         <p>
           1/{" "}
           <a
