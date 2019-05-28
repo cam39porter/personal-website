@@ -50,6 +50,17 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
+          - {
+              label: News,
+              name: news,
+              widget: list,
+              fields:
+                [
+                  { label: Name, name: name, widget: string },
+                  { label: Link, name: link, widget: string },
+                  { label: Description, name: description, widget: string },
+                ],
+            }
       - file: "src/pages/things.md"
         label: "Things"
         name: "things"
@@ -59,4 +70,15 @@ collections:
               name: "templateKey",
               widget: "things",
               default: "things-page",
+            }
+          - {
+              label: Things,
+              name: things,
+              widget: list,
+              fields:
+                [
+                  { label: Name, name: name, widget: string },
+                  { label: Link, name: link, widget: string },
+                  { label: Description, name: description, widget: string },
+                ],
             }
