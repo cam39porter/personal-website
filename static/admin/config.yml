@@ -40,3 +40,23 @@ collections:
               widget: "hidden",
               default: "contact-page",
             }
+      - file: "src/pages/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+      - file: "src/pages/things.md"
+        label: "Things"
+        name: "things"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "things",
+              default: "things-page",
+            }

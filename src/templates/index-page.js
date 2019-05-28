@@ -8,7 +8,7 @@ import Card from "../components/HomeCard";
 export const IndexPageTemplate = ({ title }) => (
   <div className={`pb3 f6 fw1`}>
     <div className={`flex flex-wrap items-center justify-center pb3`}>
-      <Card title={`read.me`}>
+      <Card title={`read.me`} to={`/about`}>
         <p>
           It's been a winding path to get here. I grew up in southwest Ohio,
           found{" "}
@@ -136,7 +136,7 @@ export const IndexPageTemplate = ({ title }) => (
           dinner conversation.
         </p>
       </Card>
-      <Card title={`Things I Like`}>
+      <Card title={`Things I Like`} to={`/things`}>
         <p>
           <a className={`link dim underline off-white`} target="_blank" href="">
             Lamy fountain pen
