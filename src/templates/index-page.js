@@ -97,7 +97,7 @@ export const IndexPageTemplate = ({ title }) => (
           <a
             className={`link dim underline off-white`}
             target="_blank"
-            href="http://augmentingcognition.com/ltm.html"
+            href="https://www.notion.so/Idea-Template-6016541bd5da4644913b79e90aecabd6"
           >
             Spaced Repetition
           </a>{" "}
