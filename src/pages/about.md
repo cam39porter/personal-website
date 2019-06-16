@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 news:
-  - name: test
-    link: google.com
-    description: this is the description
+  - name: Work In Progress
+    link: incremental.nyc
+    description: Apologies, I am still building out the site!
 ---

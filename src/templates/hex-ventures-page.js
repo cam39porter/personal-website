@@ -55,6 +55,31 @@ class HexVenturesPageTemplate extends React.Component {
               reach out!
             </p>
           </Card>
+          <Card title={`Helpful Materials`}>
+            <p>
+              When I have a nugget of an idea, I usually try to formalize it a
+              bit using{" "}
+              <a
+                className={`link dim underline off-white`}
+                target="_blank"
+                href="https://www.notion.so/Idea-Framework-647d340f558449348399db668574b00e"
+              >
+                this framework
+              </a>{" "}
+              and then share it with as many potential customers as possible.
+            </p>
+            <p>
+              When I am looking at an early stage investment, I try to answer{" "}
+              <a
+                className={`link dim underline off-white`}
+                target="_blank"
+                href="https://www.notion.so/Early-Stage-Evaluation-Template-801d462b43d44f8db077defd3f0cbfec"
+              >
+                these questions
+              </a>
+              .
+            </p>
+          </Card>
           <Card title={`Reach Out`}>
             {this.state.contactSubmitted ? (
               <p>
