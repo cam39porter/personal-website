@@ -13,7 +13,7 @@ function encode(data) {
 class HexVenturesPageTemplate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { isValidated: false, contactSubmitted: false };
   }
 
   handleChange = e => {
@@ -31,7 +31,11 @@ class HexVenturesPageTemplate extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => {
+        this.setState({
+          contactSubmitted: true
+        });
+      })
       .catch(error => alert(error));
   };
 
@@ -49,69 +53,76 @@ class HexVenturesPageTemplate extends React.Component {
             <p>3/ You have any reasonable reason to connect!</p>
           </Card>
           <Card title={`Connect with Me`}>
-            <p>
-              <form
-                name="contact"
-                method="post"
-                action="/contact/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
-                className={`off-white`}
-              >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
-                <div hidden>
-                  <label>
-                    Don’t fill this out:{" "}
-                    <input name="bot-field" onChange={this.handleChange} />
-                  </label>
-                </div>
-                <div className="field">
-                  <div className="control mv2">
-                    <input
-                      className="input-reset input ba b--off-white bg-base off-white pa2 w-100"
-                      type={"email"}
-                      name={"email"}
-                      onChange={this.handleChange}
-                      id={"email"}
-                      required={true}
-                      placeholder={"email"}
-                    />
+            {this.state.contactSubmitted ? (
+              <p>
+                thanks for reaching out! i go through these submissions on
+                sundays so do not expect a response before then.
+              </p>
+            ) : (
+              <p>
+                <form
+                  name="contact"
+                  method="post"
+                  action="/contact/thanks/"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={this.handleSubmit}
+                  className={`off-white`}
+                >
+                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div hidden>
+                    <label>
+                      Don’t fill this out:{" "}
+                      <input name="bot-field" onChange={this.handleChange} />
+                    </label>
                   </div>
-                </div>
-                <div className="field">
-                  <div className="control mv2">
-                    <textarea
-                      className="input-reset input ba b--off-white bg-base off-white pa2 w-100 textarea"
-                      name={"message"}
-                      onChange={this.handleChange}
-                      id={"message"}
-                      required={true}
-                      placeholder={"message"}
-                    />
+                  <div className="field">
+                    <div className="control mv2">
+                      <input
+                        className="input-reset input ba b--off-white bg-base off-white pa2 w-100"
+                        type={"email"}
+                        name={"email"}
+                        onChange={this.handleChange}
+                        id={"email"}
+                        required={true}
+                        placeholder={"email"}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="field">
-                  <div className="control mv2">
-                    <input
-                      className="file-input input-reset"
-                      type="file"
-                      name="attachment"
-                      onChange={this.handleAttachment}
-                    />
+                  <div className="field">
+                    <div className="control mv2">
+                      <textarea
+                        className="input-reset input ba b--off-white bg-base off-white pa2 w-100 textarea"
+                        name={"message"}
+                        onChange={this.handleChange}
+                        id={"message"}
+                        required={true}
+                        placeholder={"message"}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="field">
-                  <button
-                    className="input-reset button is-link pa2 mt1 off-white bg-base ba b--off-white grow pointer"
-                    type="submit"
-                  >
-                    Send
-                  </button>
-                </div>
-              </form>
-            </p>
+                  <div className="field">
+                    <div className="control mv2">
+                      <input
+                        className="file-input input-reset"
+                        type="file"
+                        name="attachment"
+                        onChange={this.handleAttachment}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <button
+                      className="input-reset button is-link pa2 mt1 off-white bg-base ba b--off-white grow pointer"
+                      type="submit"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </p>
+            )}
           </Card>
         </div>
       </div>
