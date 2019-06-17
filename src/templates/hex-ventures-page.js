@@ -86,6 +86,9 @@ class HexVenturesPageTemplate extends React.Component {
                 thanks for reaching out! i go through these submissions on
                 sundays so do not expect a response before then.
               </p>
+              <p>
+                if you do not hear back from me by the following sunday, please follow up again!
+              </p>
             ) : (
               <p>
                 <form

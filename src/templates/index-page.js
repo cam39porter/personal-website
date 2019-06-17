@@ -163,7 +163,7 @@ export const IndexPageTemplate = ({ title }) => (
         </p>
         <p>and much more (kind of)...</p>
       </Card>
-      <Card title={`Connect`} to={"/contact"}>
+      <Card title={`Connect`} to={"/hex-ventures"}>
         <p>
           The best way to reach me is{" "}
           <a
